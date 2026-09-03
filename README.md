@@ -1,28 +1,16 @@
-This is a Kotlin Multiplatform project targeting Desktop (JVM).
+# Simple teleprompter
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+### App overview
+- A very simple teleprompter for any OS that runs Java
 
-### Running the apps
+### Functions
+- Resizable (only when it is not in transparent mode)
+- Paste any script
+- Set vertical scroll speed
+- Set character highlight speed
+- Start/Stop button
+- View can be transparent (in this mode the window is not transparent)
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
-
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-
-### Running tests
-
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
-
-- Desktop tests: `./gradlew :shared:jvmTest`
-
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+### Future plan
+- Stick it, so when the user clicks outside, the window still will be presented the last selected size
+- When screen is shared during a meeting, even tho the user uses it, it won't be visible for other
