@@ -28,7 +28,7 @@ fun ControlBar(
     ) {
         if (state.editing) {
             Button(onClick = state::startPrompting, enabled = state.hasScript) {
-                Text("Kész")
+                Text("Done")
             }
         } else {
             Button(onClick = state::edit) { Text("Edit") }
